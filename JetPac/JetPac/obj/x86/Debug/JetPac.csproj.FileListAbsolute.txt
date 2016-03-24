@@ -1,0 +1,16 @@
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\JetPac.exe
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\JetPac.pdb
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.dll
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.xml
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.csprojResolveAssemblyReference.cache
+D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.exe
+D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.pdb
