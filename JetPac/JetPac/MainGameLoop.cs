@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JetPac.GameEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -11,79 +12,74 @@ using Microsoft.Xna.Framework.Media;
 
 namespace JetPac
 {
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
+    /// <summary>Основной класс игры</summary>
     public class MainGameLoop : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        /// <summary>Графический экран</summary>
+        GraphicsDeviceManager Graphics;
 
+        /// <summary>Простынь со спрайтами</summary>
+        SpriteBatch SpriteBatch;
+
+        /// <summary>Шрифт для вывода текста</summary>
+        SpriteFont Font;
+
+        /// <summary>Статический класс по работе со звуком</summary>
+        //SoundEngine
+
+        /// <summary>Статический класс опрос клавиатуры и мыши</summary>
+        //Input
+
+
+        // конструктор
         public MainGameLoop()
         {
-            graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            Graphics.PreferredBackBufferHeight = Const.ScrDy;
+            Graphics.PreferredBackBufferWidth = Const.ScrDx;
+
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
-
-            base.Initialize();
-        }
-
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+        
+        //Загрузка всех ресурсов
         protected override void LoadContent()
         {
+            //загружаем шрифт
+            Font = Content.Load<SpriteFont>("font");
+
+            //Инициализируем статический класс со звуком
+            SoundEngine.SoundInit(Content);
+
+
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
-
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        
+        //Обновление модели игры
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            // Выход при нажатии Escape
+            if (Input.IsKeyDown(Keys.Escape)) this.Exit();
+            //Обновляем состояние клавиатуры
+            Input.Update();
 
-            // TODO: Add your update logic here
+
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        
+        //Отрисовка модели игры
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            
 
             base.Draw(gameTime);
         }

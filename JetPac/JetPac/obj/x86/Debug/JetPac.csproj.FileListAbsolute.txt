@@ -14,3 +14,6 @@ D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.csprojResolveAssemblyRefer
 D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.exe
 D:\Projects\JetPac\JetPac\JetPac\obj\x86\Debug\JetPac.pdb
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\font.xnb
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\ItemPickUp.xnb
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\PulseShot.xnb
