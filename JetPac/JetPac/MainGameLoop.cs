@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetPac.GameEngine;
+using JetPac.GamePhase;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -30,6 +31,8 @@ namespace JetPac
         /// <summary>Статический класс опрос клавиатуры и мыши</summary>
         //Input
 
+        /// <summary>Статический класс смена фаз (сцен) игры</summary>
+        //GamePhaseManager
 
         // конструктор
         public MainGameLoop()
@@ -51,12 +54,18 @@ namespace JetPac
 
             //Инициализируем статический класс со звуком
             SoundEngine.SoundInit(Content);
-
-
+            
             // Create a new SpriteBatch, which can be used to draw textures.
             SpriteBatch = new SpriteBatch(GraphicsDevice);
 
-            
+            //Загружаем все фазы(сцены)
+            GamePhaseManager.Add(Phase.Exit, new PhaseExit(this));
+            GamePhaseManager.Add(Phase.LoadScr, new LoadScrPhase(Content.Load<Texture2D>("Load Scr"), SpriteBatch, Font));
+            GamePhaseManager.Add(Phase.MainMenu, new MainMenuPhase(Content.Load<Texture2D>("stars_texture"), SpriteBatch, Font));
+
+            //Переключаемся на фазу загрузочной картинки
+            GamePhaseManager.SwitchTo(Phase.LoadScr);
+
         }
 
         
@@ -68,6 +77,8 @@ namespace JetPac
             //Обновляем состояние клавиатуры
             Input.Update();
 
+            //Обновляем текущую сцену
+            GamePhaseManager.CurrentPhase.Update(gameTime);
 
 
             base.Update(gameTime);
@@ -77,9 +88,12 @@ namespace JetPac
         //Отрисовка модели игры
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
+            SpriteBatch.Begin();
 
-            
+            GamePhaseManager.CurrentPhase.Draw();
+
+            SpriteBatch.End();
 
             base.Draw(gameTime);
         }

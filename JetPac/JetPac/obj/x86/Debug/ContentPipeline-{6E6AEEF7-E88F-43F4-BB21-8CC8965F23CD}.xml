@@ -28,6 +28,24 @@
       <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\PulseShot.xnb</Output>
       <Time>2016-03-24T13:10:27.5186836+03:00</Time>
     </Item>
+    <Item>
+      <Source>Load Scr.png</Source>
+      <Name>Load Scr</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\Load Scr.xnb</Output>
+      <Time>2016-03-25T10:27:51.6037342+03:00</Time>
+    </Item>
+    <Item>
+      <Source>stars_texture.png</Source>
+      <Name>stars_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\stars_texture.xnb</Output>
+      <Time>2016-03-25T11:25:57.960335+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{6E6AEEF7-E88F-43F4-BB21-8CC8965F23CD}</ContentProjectGUID>

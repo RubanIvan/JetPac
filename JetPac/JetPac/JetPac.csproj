@@ -77,6 +77,9 @@
     <Compile Include="GameEngine\GamePhase.cs" />
     <Compile Include="GameEngine\Input.cs" />
     <Compile Include="GameEngine\Sound.cs" />
+    <Compile Include="GamePhase\LoadScrPhase.cs" />
+    <Compile Include="GamePhase\MainMenuPhase.cs" />
+    <Compile Include="GamePhase\PhaseExit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="MainGameLoop.cs" />

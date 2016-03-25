@@ -7,5 +7,7 @@ namespace JetPac.GameEngine
 {
     abstract class GameObject
     {
+        
+
     }
 }

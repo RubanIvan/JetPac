@@ -13,16 +13,18 @@ namespace JetPac.GameEngine
     public enum Phase
     {
         Exit,
+        /// <summary>Загрузочная картинка</summary>
+        LoadScr,
         /// <summary>Начальное меню</summary>
-        MainMenu,
-        /// <summary>Сама игра</summary>
-        PlayGame,
+        MainMenu
+        ///// <summary>Сама игра</summary>
+        //PlayGame,
 
-        GameOver,
+        //GameOver,
 
-        HiScore,
+        //HiScore,
 
-        NewHiScore
+        //NewHiScore
     }
 
     /// <summary>Управляет фазами игры </summary>
@@ -31,14 +33,13 @@ namespace JetPac.GameEngine
         /// <summary>Хранит все возможные фазы игры</summary>
         private static Dictionary<Phase, GamePhaseObject> GamePhases = new Dictionary<Phase, GamePhaseObject>();
 
-        private static GamePhaseObject _CurrentPhase;
         /// <summary>Текущее состояние игры</summary>
-        public static GamePhaseObject CurrentPhase
-        {
-            get { return _CurrentPhase; }
-            private set { _CurrentPhase = value; }
-
-        }
+        public static GamePhaseObject CurrentPhase;
+        //public static GamePhaseObject CurrentPhase
+        //{
+        //    get { return _CurrentPhase; }
+        //    private set { _CurrentPhase = value; }
+        //}
 
         /// <summary>Добавление фазы </summary>
         public static void Add(Phase phase, GamePhaseObject gamestate)
@@ -74,6 +75,9 @@ namespace JetPac.GameEngine
 
         /// <summary>Список всех объектов</summary>
         protected List<GameObject> GameObjects;
+
+        /// <summary>Время прошедшее с последнего Update </summary>
+        protected int ElapsedTime = 0;
 
         //Конструктор
         public GamePhaseObject(Texture2D texture, SpriteBatch spriteBatch, SpriteFont font)

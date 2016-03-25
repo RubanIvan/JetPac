@@ -9,7 +9,7 @@ namespace JetPac.GameEngine
     public static class Const
     {
         /// <summary>Размер экрана</summary>
-        public const int ScrDx = 800 - 32;
+        public const int ScrDx = 800 ;
         public const int ScrDy = 600;
     }
 }
