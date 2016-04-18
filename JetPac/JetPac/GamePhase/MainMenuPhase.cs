@@ -56,7 +56,10 @@ namespace JetPac.GamePhase
             {
                 SpriteBatch.Draw(Texture, new Rectangle(0,0,800, Overlap*-1), new Rectangle(0,2048+Overlap,800,Overlap*-1), Color.White);
             }
-            
+
+            SpriteBatch.DrawString(Font,"Player 1", new Vector2(350, 150), Color.Azure);
+            SpriteBatch.DrawString(Font, "Press any key to start", new Vector2(300-50, 150+40), Color.Azure);
+
         }
     }
 }

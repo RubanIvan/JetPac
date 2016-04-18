@@ -80,6 +80,11 @@ namespace JetPac
             //Обновляем текущую сцену
             GamePhaseManager.CurrentPhase.Update(gameTime);
 
+            if (Input.IsKeyDown(Keys.A))
+            {
+                GamePhaseManager.SwitchTo(Phase.LoadScr);
+            }
+
 
             base.Update(gameTime);
         }
