@@ -46,6 +46,15 @@
       <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\stars_texture.xnb</Output>
       <Time>2016-03-25T11:25:57.960335+03:00</Time>
     </Item>
+    <Item>
+      <Source>font1.bmp</Source>
+      <Name>font1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\font1.xnb</Output>
+      <Time>2016-04-18T17:32:58.8911878+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{6E6AEEF7-E88F-43F4-BB21-8CC8965F23CD}</ContentProjectGUID>

@@ -59,6 +59,8 @@ namespace JetPac.GamePhase
 
             SpriteBatch.DrawString(Font,"Player 1", new Vector2(350, 150), Color.Azure);
             SpriteBatch.DrawString(Font, "Press any key to start", new Vector2(300-50, 150+40), Color.Azure);
+            SpriteBatch.DrawString(Font, "@1983          ALL RIGHTS RESERVED", new Vector2(50+50, 600- 50), Color.LightYellow);
+            SpriteBatch.DrawString(Font, "        A.C.G.", new Vector2(50 + 50, 600 - 50), Color.LightGreen);
 
         }
     }

@@ -50,7 +50,7 @@ namespace JetPac
         protected override void LoadContent()
         {
             //загружаем шрифт
-            Font = Content.Load<SpriteFont>("font");
+            Font = Content.Load<SpriteFont>("font1");
 
             //Инициализируем статический класс со звуком
             SoundEngine.SoundInit(Content);

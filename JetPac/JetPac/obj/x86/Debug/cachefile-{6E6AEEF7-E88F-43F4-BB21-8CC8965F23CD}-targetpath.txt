@@ -3,3 +3,4 @@ Content\font.xnb
 Content\PulseShot.xnb
 Content\Load Scr.xnb
 Content\stars_texture.xnb
+Content\font1.xnb

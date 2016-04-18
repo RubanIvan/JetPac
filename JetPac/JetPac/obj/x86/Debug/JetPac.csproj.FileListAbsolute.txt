@@ -19,3 +19,4 @@ D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\ItemPickUp.xnb
 D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\PulseShot.xnb
 D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\Load Scr.xnb
 D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\stars_texture.xnb
+D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\font1.xnb
