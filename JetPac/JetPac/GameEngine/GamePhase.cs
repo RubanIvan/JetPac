@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using JetPac.GameEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,9 +17,9 @@ namespace JetPac.GameEngine
         /// <summary>Загрузочная картинка</summary>
         LoadScr,
         /// <summary>Начальное меню</summary>
-        MainMenu
+        MainMenu,
         ///// <summary>Сама игра</summary>
-        //PlayGame,
+        PlayGame
 
         //GameOver,
 
@@ -50,6 +51,8 @@ namespace JetPac.GameEngine
         /// <summary>Переключение состояний</summary>
         public static void SwitchTo(Phase phase)
         {
+            
+
             if (CurrentPhase != null)
             {
                 //если это первое преклюение не вызываем LostFocus у предыдущего состояния
@@ -58,12 +61,13 @@ namespace JetPac.GameEngine
                 CurrentPhase = GamePhases[phase];
                 CurrentPhase.Reset();
                 CurrentPhase.Focus();
-            
+
             
         }
 
     }
 
+    
     /// <summary>Каждая часть игры (меню,список очков,настройки) должна иметь эти методы и свойства</summary>
     abstract class GamePhaseObject
     {
@@ -71,7 +75,7 @@ namespace JetPac.GameEngine
         public SpriteBatch SpriteBatch;
         public Texture2D Texture;
         public SpriteFont Font;
-
+       
 
         /// <summary>Список всех объектов</summary>
         protected List<GameObject> GameObjects;
@@ -86,10 +90,10 @@ namespace JetPac.GameEngine
             Texture = texture;
             SpriteBatch = spriteBatch;
             Font = font;
+            
+       }
 
-        }
-
-        public abstract void Update(GameTime gameTime);
+    public abstract void Update(GameTime gameTime);
 
         public abstract void Draw();
 

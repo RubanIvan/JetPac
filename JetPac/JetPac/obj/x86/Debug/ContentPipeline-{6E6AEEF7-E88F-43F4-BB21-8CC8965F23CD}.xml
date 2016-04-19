@@ -55,6 +55,15 @@
       <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\font1.xnb</Output>
       <Time>2016-04-18T17:32:58.8911878+03:00</Time>
     </Item>
+    <Item>
+      <Source>game_sprite.png</Source>
+      <Name>game_sprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Projects\JetPac\JetPac\JetPac\bin\x86\Debug\Content\game_sprite.xnb</Output>
+      <Time>2016-04-19T12:12:06.9881958+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{6E6AEEF7-E88F-43F4-BB21-8CC8965F23CD}</ContentProjectGUID>

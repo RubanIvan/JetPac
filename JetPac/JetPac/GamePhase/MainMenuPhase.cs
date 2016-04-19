@@ -9,12 +9,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace JetPac.GamePhase
 {
-    class MainMenuPhase: GamePhaseObject
+    class MainMenuPhase : GamePhaseObject
     {
         /// <summary>Позиция на экране для вывода заднего фона</summary>
         Rectangle BkgTo = new Rectangle(0, 0, 800, 600);
         /// <summary>Позиция заднего фона в текстуре</summary>
-        Rectangle BkgFrom = new Rectangle(0, 2048-600-1000, 800, 600);
+        Rectangle BkgFrom = new Rectangle(0, 2048 - 600 - 1000, 800, 600);
 
         /// <summary>На сколько пикселей смещать задний фон</summary>
         int BkgDelta = 4;
@@ -43,7 +43,11 @@ namespace JetPac.GamePhase
                     Overlap = 2048 + Overlap;
                 }
                 BkgFrom = new Rectangle(0, Overlap, 800, 600);
-                
+            }
+            
+            if (Input.PressAnyKey())
+            {
+                GamePhaseManager.SwitchTo(Phase.PlayGame);
             }
         }
 
@@ -54,12 +58,12 @@ namespace JetPac.GamePhase
             //если необходимо перекрытие то рисуем его
             if (Overlap < 0)
             {
-                SpriteBatch.Draw(Texture, new Rectangle(0,0,800, Overlap*-1), new Rectangle(0,2048+Overlap,800,Overlap*-1), Color.White);
+                SpriteBatch.Draw(Texture, new Rectangle(0, 0, 800, Overlap * -1), new Rectangle(0, 2048 + Overlap, 800, Overlap * -1), Color.White);
             }
 
-            SpriteBatch.DrawString(Font,"Player 1", new Vector2(350, 150), Color.Azure);
-            SpriteBatch.DrawString(Font, "Press any key to start", new Vector2(300-50, 150+40), Color.Azure);
-            SpriteBatch.DrawString(Font, "@1983          ALL RIGHTS RESERVED", new Vector2(50+50, 600- 50), Color.LightYellow);
+            SpriteBatch.DrawString(Font, "Player 1", new Vector2(350, 150), Color.Azure);
+            SpriteBatch.DrawString(Font, "Press any key to start", new Vector2(300 - 50, 150 + 40), Color.Azure);
+            SpriteBatch.DrawString(Font, "@1983          ALL RIGHTS RESERVED", new Vector2(50 + 50, 600 - 50), Color.LightYellow);
             SpriteBatch.DrawString(Font, "        A.C.G.", new Vector2(50 + 50, 600 - 50), Color.LightGreen);
 
         }

@@ -62,9 +62,11 @@ namespace JetPac
             GamePhaseManager.Add(Phase.Exit, new PhaseExit(this));
             GamePhaseManager.Add(Phase.LoadScr, new LoadScrPhase(Content.Load<Texture2D>("Load Scr"), SpriteBatch, Font));
             GamePhaseManager.Add(Phase.MainMenu, new MainMenuPhase(Content.Load<Texture2D>("stars_texture"), SpriteBatch, Font));
+            GamePhaseManager.Add(Phase.PlayGame, new PlayPhase(Content.Load<Texture2D>("game_sprite"), SpriteBatch, Font));
 
             //Переключаемся на фазу загрузочной картинки
-            GamePhaseManager.SwitchTo(Phase.LoadScr);
+            //GamePhaseManager.SwitchTo(Phase.LoadScr);
+            GamePhaseManager.SwitchTo(Phase.PlayGame);
 
         }
 
@@ -80,12 +82,7 @@ namespace JetPac
             //Обновляем текущую сцену
             GamePhaseManager.CurrentPhase.Update(gameTime);
 
-            if (Input.IsKeyDown(Keys.A))
-            {
-                GamePhaseManager.SwitchTo(Phase.LoadScr);
-            }
-
-
+            
             base.Update(gameTime);
         }
 

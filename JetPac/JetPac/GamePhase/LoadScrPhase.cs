@@ -21,8 +21,10 @@ namespace JetPac.GamePhase
 
         public override void Update(GameTime gameTime)
         {
+            
             if (Input.PressAnyKey())
             {
+                
                 GamePhaseManager.SwitchTo(Phase.MainMenu);
             }
         }

@@ -73,13 +73,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameEngine\Const.cs" />
-    <Compile Include="GameEngine\GameObject.cs" />
+    <Compile Include="GameEngine\TrueRandom.cs" />
+    <Compile Include="GameObject\Floor.cs" />
+    <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameEngine\GamePhase.cs" />
     <Compile Include="GameEngine\Input.cs" />
     <Compile Include="GameEngine\Sound.cs" />
     <Compile Include="GamePhase\LoadScrPhase.cs" />
     <Compile Include="GamePhase\MainMenuPhase.cs" />
     <Compile Include="GamePhase\PhaseExit.cs" />
+    <Compile Include="GamePhase\PlayPhase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="MainGameLoop.cs" />

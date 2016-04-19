@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace JetPac.GameEngine
@@ -31,6 +32,11 @@ namespace JetPac.GameEngine
         /// <summary>список нажатых клавиш в порядке их нажатия</summary>
         public static List<Keys> KeyStatePrioryti = new List<Keys>();
 
+        //когда было отрабатывание нажатия любой клавиши
+        //опрос происходит слишком быстро 
+        //происходит двойное нажатие на клавишу
+        private static DateTime AnyKeyDownTime=DateTime.Now;
+        
         /// <summary>Обновлене данных</summary>
         public static void Update()
         {
@@ -54,7 +60,14 @@ namespace JetPac.GameEngine
         /// <summary>Проверка на нажатие любой клавиши</summary>
         public static bool PressAnyKey()
         {
-            if (PreviousKeyboardState != CurrentKeyboardState) return true;
+            if((DateTime.Now - AnyKeyDownTime).Milliseconds<500) return false;
+
+            if (PreviousKeyboardState != CurrentKeyboardState)
+            {
+                //PreviousKeyboardState = CurrentKeyboardState = Keyboard.GetState();
+                AnyKeyDownTime=DateTime.Now;
+                return true;
+            }
             return false;
         }
 
