@@ -72,13 +72,21 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameEngine\Animation.cs" />
     <Compile Include="GameEngine\Const.cs" />
+    <Compile Include="GameEngine\IEnemy.cs" />
     <Compile Include="GameEngine\TrueRandom.cs" />
+    <Compile Include="GameObject\Blow.cs" />
+    <Compile Include="GameObject\EnemyMeteor.cs" />
     <Compile Include="GameObject\Floor.cs" />
+    <Compile Include="GameObject\GameMaster.cs" />
     <Compile Include="GameObject\GameObject.cs" />
     <Compile Include="GameEngine\GamePhase.cs" />
     <Compile Include="GameEngine\Input.cs" />
     <Compile Include="GameEngine\Sound.cs" />
+    <Compile Include="GameObject\Level.cs" />
+    <Compile Include="GameObject\Rack.cs" />
+    <Compile Include="GameObject\Rocket.cs" />
     <Compile Include="GamePhase\LoadScrPhase.cs" />
     <Compile Include="GamePhase\MainMenuPhase.cs" />
     <Compile Include="GamePhase\PhaseExit.cs" />

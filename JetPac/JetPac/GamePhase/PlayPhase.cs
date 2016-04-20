@@ -13,12 +13,17 @@ namespace JetPac.GamePhase
     {
         public PlayPhase(Texture2D texture, SpriteBatch spriteBatch, SpriteFont font) : base(texture, spriteBatch, font)
         {
-            Floor fl=new Floor(GameObjects,Texture, SpriteBatch, Font);
-            GameObjects.Add(fl);
+            //создаем GameMaster в дальнейшем он делает ключивые изменения в игре
+            GameMaster GM=new GameMaster(GameObjects, Texture, SpriteBatch, Font);
+            GameObjects.Add(GM);
         }
 
         public override void Update(GameTime gameTime)
         {
+            for (int i = 0; i < GameObjects.Count; i++)
+            {
+                GameObjects[i].Update(gameTime);
+            }
             
         }
 

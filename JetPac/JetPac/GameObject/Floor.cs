@@ -37,18 +37,15 @@ namespace JetPac.GameObject
                 ScrCoord[i]=new Rectangle(16*i, 584, 16, 16);
             }
 
-            _collaider=new Rectangle(0,584,16,16);
+            //колайдер для столкновений
+            _collaider=new Rectangle(0,584,800,16);
 
         }
 
-        public override void Update(GameTime gameTime)
-        {
-            
-        }
-
+        
         public override void Draw()
         {
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < TextureFrom.Length; i++)
             {
                 SpriteBatch.Draw(Texture, ScrCoord[i], TextureFrom[i], Color.Yellow);
             }

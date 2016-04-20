@@ -32,10 +32,13 @@ namespace JetPac.GameEngine
             Font = font;
         }
 
+        /// <summary>Перемещаем обьект в точку x,y</summary>
+        public virtual void MoveTo(Point pos) { }
         
 
-        public abstract void Update(GameTime gameTime);
-        public abstract void Draw();
+        public virtual void Update(GameTime gameTime) {}
+
+        public virtual void Draw(){}
 
 
     }
